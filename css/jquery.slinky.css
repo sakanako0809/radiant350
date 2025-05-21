@@ -1,0 +1,192 @@
+/* Required styles; changing these may break the menu */
+
+*,
+ul,
+li {
+    padding: 0px;
+    margin: 0px;
+}
+
+#fixed-top-bar {
+    width: 100%;
+    background-color: #13141D;
+}
+
+.delete-menu {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    /*position: fixed;
+        bottom: 0px;
+        left:0px;*/
+}
+
+.delete-menu span {
+    font-size: 15px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    line-height: 50px;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    transition: 1s;
+    transform: translateX(100px);
+    z-index: 999999999999999999;
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-icon {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        transition: 1s;
+        transform: translateX(0px);
+        z-index: 999999999999999999;
+        width: 40px;
+        height: 40px;
+    }
+    .menu-icon i {
+        font-size: 24px;
+        color: #13141D;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999999999998;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+#menu.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+    pointer-events: fill;
+}
+
+.slinky-menu {
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: all 300ms ease;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 300ms ease;
+    background-color: #13141D;
+    letter-spacing: 2px;
+}
+
+.slinky-menu>ul {
+    left: 0;
+    position: relative;
+    transform: translateZ(0);
+    transition: all 300ms ease;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 300ms ease;
+}
+
+.slinky-menu ul,
+.slinky-menu li {
+    list-style: none;
+    margin: 0;
+    line-height: 25px;
+}
+
+.slinky-menu ul {
+    width: 100%;
+    height: 100vh;
+}
+
+.slinky-menu a {
+    display: block;
+    font-size: 15px;
+}
+
+.slinky-menu li ul {
+    display: none;
+    left: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.slinky-menu .header {
+    position: relative;
+}
+
+.slinky-menu h2~a.back {
+    left: 0;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    line-height: 80px;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.slinky-menu h2 {
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+}
+
+/* Default theme */
+
+.slinky-menu .header {
+    background: #fff;
+    height: 80px;
+    background-color: #13141D;
+}
+
+.slinky-menu h2 {
+    color: #fff;
+    /* padding: 1em; */
+    line-height: 80px;
+}
+
+.slinky-menu a {
+    border: none;
+    color: #FFF;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.slinky-menu a.title {
+    color: #fff;
+    border-bottom: .5px solid #fff;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slinky-menu a:hover {
+    background: #000;
+}
+
+.slinky-menu a.next:after {
+    content: '\276f';
+    margin-left: 1em;
+    float: right;
+}
+
+.slinky-menu a.back:before {
+    content: '\276e';
+    margin-right: 1em;
+    float: left;
+    color: #EC662C;
+}

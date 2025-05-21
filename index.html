@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+
+    <!-- ico -->
+    <link rel="icon" type="image/x-icon" href="images/logo_s.png" />
+
+    <script src="lib/general.js"></script>
+
+    <title>耀展有限公司</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css?2222">
+    <link rel="stylesheet" type="text/css" href="css/bootsnav.css?2222">
+    <link rel="stylesheet" href="css/index.css?20200709-2">
+    <link rel="stylesheet" href="css/menu.css?202006019-3">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?2222">
+    <!--menu-->
+    <link rel="stylesheet" href="css/jquery.slinky.css?3">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="js/fontawesome.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css?2222">
+    <script src="js/swiper.animate1.0.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js?2222"></script>
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css?2222">
+    <!-- wow -->
+    <script src="js/jquery.min.js?2222"></script>
+    <script src="js/jquery-1.11.0.min.js?2222"></script>
+
+    <script type="text/javascript" src="js/bootsnav.js?2222"></script>
+    <script src="js/bootstrap.min.js?2222"></script>
+    <script src="js/jquery.slinky.js?2222"></script>
+
+    <!--validation-->
+    <script src="assets/components/jquery-validation/js/jquery.validate.js"></script>
+
+    <script src="lib/general.js?2222"></script>
+    <script src="lib/default.js?20200804-1"></script>
+    <!--Chart-->
+    <script src="js/utils.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <!--滑塊-->
+    <link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+    <script type="text/javascript" src="dist/fullpage.js"></script>
+    <script type="text/javascript" src="dist/examples.js"></script>
+    <script type="text/javascript" src="dist/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="dist/fullpage.scrollOverflowReset.min.js"></script>
+    <script type="text/javascript" src="dist/fullpage.extensions.min.js"></script>
+
+    <style>
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 1;
+            display: block;
+            background: url(images/Calendar.svg) no-repeat;
+            width: 20px;
+            height: 20px;
+            border-width: thin;
+        }
+
+        .pointer {
+            cursor: pointer
+        }
+
+        button,
+        a {
+            outline: none;
+            cursor: pointer
+        }
+
+        *,
+        ul,
+        li {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #fixed-top-bar {
+            width: 100%;
+            background-color: #13141D;
+        }
+
+        .delete-menu span {
+            font-size: 15px;
+            display: block;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            line-height: 50px;
+        }
+
+        .menu-icon {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            transition: 1s;
+            transform: translateX(100px);
+            z-index: 999999999999999999;
+            width: 40px;
+            height: 40px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .menu-icon {
+                position: fixed;
+                top: 15px;
+                right: 20px;
+                transition: 1s;
+                transform: translateX(0px);
+                z-index: 999999999999999999;
+                width: 40px;
+                height: 40px;
+            }
+            .menu-icon i {
+                font-size: 24px;
+                color: #13141D;
+                display: block;
+                text-align: center;
+                line-height: 40px;
+            }
+            .bg-style-wrap.left-bg-position.pt-200.max-height-style.fullscreen {
+                /*height:auto;*/
+            }
+            /*#Chart_stock{
+                    display:none !important;
+                }*/
+        }
+
+        .video_bg {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            right: 0;
+            bottom: 0;
+        }
+
+        @media screen and (min-width: 1025px) {
+            .swiper-container .swiper-wrapper .swiper-slide .sales-case-wrap .right-txt .txt-wrap .btn-wrap button {
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+            .swiper-container .swiper-wrapper .swiper-slide .sales-case-wrap .right-txt .txt-wrap .btn-wrap button:nth-child(1) {
+                margin: 0;
+                margin-right: 20px;
+                padding: 10px 0;
+            }
+            .swiper-container .swiper-wrapper .swiper-slide .sales-case-wrap .right-txt .txt-wrap .btn-wrap button:nth-child(2) {
+                margin: 0;
+                padding: 10px 0;
+            }
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            background-color: white;
+            z-index: 99999;
+        }
+
+        .fullscreen {
+            min-height: 100vh
+        }
+
+        /*20200604 HeaderEffect*/
+
+        .active2 {
+            top: -100px !important;
+            transition: 1s !important;
+        }
+
+        .midel {
+            display: flex;
+            align-items: center;
+            /*justify-content: center;*/
+        }
+
+        /*.container#bg002{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }*/
+    </style>
+
+    <style>
+        .banner-bg {
+            display: none;
+        }
+
+        .dl_bt+.dl_bt {
+            margin-top: 10px;
+        }
+
+        a i.fa.fa-download {
+            color: #d1b276
+        }
+
+        .dl_btBox a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        thead.bgc-style {
+            background-color: #C8A070 !important;
+            color: #fff !important;
+        }
+
+        .table>tbody>tr>td,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>td,
+        .table>tfoot>tr>th,
+        .table>thead>tr>td,
+        .table>thead>tr>th {
+            vertical-align: middle;
+        }
+
+        .contain-txt-wrap {
+            padding-top: 35px;
+        }
+
+        .left-line {
+            top: 30px;
+        }
+
+        .title0-wrap .ch-title h1 {
+            line-height: 1.4
+        }
+
+        .title0-wrap .num span {
+            line-height: 1.1
+        }
+
+        button,
+        a {
+            outline: none;
+            cursor: pointer
+        }
+
+        .footeremail {
+            font-family: 'Playfair Display', 'Microsoft JhengHei', sans-serif !important;
+            color: #fff;
+        }
+    </style>
+    <!--GA-->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5ZDJ7K3');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <title>
+        Home Page
+    </title>
+</head>
+
+<body style="overflow-x: hidden;" oncontextmenu="return false;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZDJ7K3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <form method="post" action="./default" id="ctl01">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"
+            />
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="UjEV5QRsEk+x7p1bS+xSH5E6Q4rXnOwYi54p8ujM/g5IVXwTsNz7yPuuZlQWcCU6wtQo2CEMKJFmG20DHbw1yM1aqnN6gnYPGyZJ2nC+BIEF4dk+glwtIUlEUTyF4/GZj1F7URVAy1vOsSOALb6ZYXcQzYQ/AAj43w206DnTGNU=" />
+        </div>
+
+        <div class="wrap" style="overflow-x: hidden;">
+            <!-- 選單 -->
+            <div class="menu-wrap" id="header1">
+                <div class="container">
+                    <div class="row flex-center-around">
+                        <div class="col-md-2">
+                            <div class="logo" onclick="general.OpenUrl('https://radiant350.com/');">
+                                <img src="images/logo.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-11 flex-end">
+                            <!-- 選單 -->
+                            <nav class="navbar navbar-default navbar-mobile bootsnav">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse flex-center-around" id="navbar-menu">
+                                    <ul class="nav navbar-nav">
+
+                                        <li class="dropdown"><a href="https://radiant350.com" class="dropdown-toggle scrollTop" data-toggle="dropdown">關於耀展</a> </li>
+
+
+                                        <li class="dropdown"><a href="https://radiant350.com" class="dropdown-toggle scrollTop" data-toggle="dropdown">精選消息</a></li>
+
+
+                                        <li class="dropdown"><a href="https://radiant350.com" class="dropdown-toggle scrollTop" data-toggle="dropdown">事業版圖</a>
+
+                                        </li>
+
+
+                                        <li><a href="https://radiant350.com" target='_self'>聯絡我們</a></li>
+
+
+                                        <li><a href="https://radiant350.com" target='_self'>會員登錄</a></li>
+
+
+                                        <li><a href="https://radiant350.com" target='_self'>CRM報修專區</a></li>
+
+
+                                        <li><a href="https://radiant350.com" target='_self'>人才招募</a></li>
+
+
+                                    </ul>
+
+                                    <div class="navbar-form">
+                                        <div class="form-group">
+                                            <input type="text" id="searchInput" class="form-control" placeholder="Search" />
+                                        </div>
+                                        <button type="submit" id="btnSearch" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 選單 -->
+            <div id="fullpage" class="fullpage-wrapper">
+
+                <script src="lib/default.js?2222"></script>
+                <!-- 滑塊總區塊 -->
+
+                <!-- 滑塊-輪播 -->
+                <div class="section" data-anchor="Banner">
+                    <!-- 輪播 -->
+                    <div class=" kvmotion swiper-container3" id="header">
+                        <!-- 影 -->
+
+
+                        <div class="swiper-wrapper">
+
+
+
+
+                            <div id="MainContent_lv_banner_img_panelImg_0" class="ani swiper-slide kv-wrap" style="background-image:url(images/modern-construction-buildings.jpg)">
+
+                                <div class="cover"></div>
+                                <div class="kv-slogon ">
+                                    <div class="title">
+                                        <h2>
+                                            <span id="MainContent_lv_banner_img_lb_title_0">Exploring the Possibilities</span>
+                                        </h2>
+                                        <div class="left-box"></div>
+                                        <span id="MainContent_lv_banner_img_lb_subTitle_0"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="MainContent_lv_banner_img_panelImg_1" class="ani swiper-slide kv-wrap" style="background-image:url(images/loop_2.jpg)">
+
+                                <div class="cover"></div>
+                                <div class="kv-slogon ">
+                                    <div class="title">
+                                        <h2>
+                                            <span id="MainContent_lv_banner_img_lb_title_1">Real Estate</span>
+                                        </h2>
+                                        <div class="left-box"></div>
+                                        <span id="MainContent_lv_banner_img_lb_subTitle_1"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="MainContent_lv_banner_img_panelImg_2" class="ani swiper-slide kv-wrap" style="background-image:url(images/loop_3.jpg">
+
+                                <div class="cover"></div>
+                                <div class="kv-slogon ">
+                                    <div class="title">
+                                        <h2>
+                                            <span id="MainContent_lv_banner_img_lb_title_2">Serviced Apartment</span>
+                                        </h2>
+                                        <div class="left-box"></div>
+                                        <span id="MainContent_lv_banner_img_lb_subTitle_2"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="MainContent_lv_banner_img_panelImg_3" class="ani swiper-slide kv-wrap" style="background-image:url(images/hotel.jpg)">
+
+                                <div class="cover"></div>
+                                <div class="kv-slogon ">
+                                    <div class="title">
+                                        <h2>
+                                            <span id="MainContent_lv_banner_img_lb_title_3">Property Management</span>
+                                        </h2>
+                                        <div class="left-box"></div>
+                                        <span id="MainContent_lv_banner_img_lb_subTitle_3"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- 如果需要分页器 -->
+                        <div id="MainContent_panel_swiper_img_1" class="swiper-pagination">
+
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div id="MainContent_panel_swiper_img_2" class="swiper-button-prev color-white">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <div id="MainContent_panel_swiper_img_3" class="swiper-button-next color-white">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+
+                    </div>
+                    <!-- 輪播 -->
+                </div>
+                <!-- 滑塊-輪播 -->
+                <!-- 滑塊-第一區塊 -->
+                <!-- 第一區塊 -->
+                <div class="section" data-anchor="Page1">
+                    <div class="bg-style-wrap midel left-bg-position pt-200 max-height-style fullscreen">
+                        <div class="container" id="bg002">
+                            <div class="row">
+                                <div class="title-wrap">
+
+
+                                    <div class="en-title color-black-font">
+                                        <h2 class="show fadeInDownBig" data-wow-duration="1s"><span class="ci-color-orange">R</span>adiant <span class="ci-color-orange">G</span>rowth
+                                            <br>
+                                            <span class="ci-color-orange">A</span>t a <span class="ci-color-orange">G</span>lance</h2>
+                                    </div>
+                                </div>
+                                <!--電腦版-->
+                                <div class="timeline-wrap">
+                                    <ul class="dot-wrap">
+
+                                        <li class="show fadeIn" data-wow-duration="1s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        2019-2020<span id="MainContent_lv_glance_lb_orangeText_0">year</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_0">INTERNATIONAL PROPERTY AWARDS<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_0">英國國際房地產<br/>亞太地區高層建築開發商類五星大獎<br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="show fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        >200,000<span id="MainContent_lv_glance_lb_orangeText_1">㎡</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_1">BUILDING STRENGTH<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_1">超過 200,000樓地板面積建築實力<br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="show fadeIn" data-wow-duration="1s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        30<span id="MainContent_lv_glance_lb_orangeText_2">+</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_2">YEARS OF COMPANY HISTORY<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_2">30+年穩健運營經驗<br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="show fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        ＄1 BILLION <span id="MainContent_lv_glance_lb_orangeText_3">USD</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_3">CONSTRUCTION PLAN<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_3">2017-2025 約300億推案量<br/><br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="show fadeIn" data-wow-duration="1s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        2018<span id="MainContent_lv_glance_lb_orangeText_4">Year</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_4">World Magazine<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_4">兩千大建設業 排名第14名<br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="show fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                            <div class="box">
+                                                <div class="bottom-dot"></div>
+                                                <div class="time-line-title color-black-font show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <h3>
+                                                        2018<span id="MainContent_lv_glance_lb_orangeText_5">Year</span></h3>
+                                                </div>
+                                                <div class="timeline show fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_enDesc_5">FINANCIAL TIMES<br/></span>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-ch show fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                                                    <p>
+                                                        <span id="MainContent_lv_glance_lb_chDesc_5">「2018亞太地區前 1000 大高成長企業」<br/></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+
+                                        <li class="line-width show fadeInLeftBig" data-wow-duration="1s"></li>
+                                    </ul>
+                                </div>
+                                <!--手機版-->
+                                <div class="timeline01">
+
+                                    <div class="container01 left01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    2019-2020<span id="MainContent_lv_glance_phone_lb_orangeText_0">year</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_0">INTERNATIONAL PROPERTY AWARDS<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_0">英國國際房地產<br/>亞太地區高層建築開發商類五星大獎<br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container01 right01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    >200,000<span id="MainContent_lv_glance_phone_lb_orangeText_1">㎡</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_1">BUILDING STRENGTH<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_1">超過 200,000樓地板面積建築實力<br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container01 left01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    30<span id="MainContent_lv_glance_phone_lb_orangeText_2">+</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_2">YEARS OF COMPANY HISTORY<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_2">30+年穩健運營經驗<br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container01 right01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    ＄1 BILLION <span id="MainContent_lv_glance_phone_lb_orangeText_3">USD</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_3">CONSTRUCTION PLAN<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_3">2017-2025 約300億推案量<br/><br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container01 left01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    2018<span id="MainContent_lv_glance_phone_lb_orangeText_4">Year</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_4">World Magazine<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_4">兩千大建設業 排名第14名<br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container01 right01">
+                                        <div class="content01">
+                                            <div class="time-line-title color-black-font">
+                                                <h3>
+                                                    2018<span id="MainContent_lv_glance_phone_lb_orangeText_5">Year</span></h3>
+                                            </div>
+                                            <div class="timeline-en">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_enDesc_5">FINANCIAL TIMES<br/></span>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-ch">
+                                                <p>
+                                                    <span id="MainContent_lv_glance_phone_lb_chDesc_5">「2018亞太地區前 1000 大高成長企業」<br/></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" data-anchor="Page2">
+                    <div class="bg-style-wrap left-bg-position max-height-style fullscreen">
+                        <div class="center-logo-slogon show fadeIn" data-wow-duration="3s">
+                            <h1>
+                                共存、共享、共榮</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" data-anchor="Page3">
+                    <div class="bg-style-wrap left-bg-position max-height-style fullscreen">
+                        <div class="container">
+                            <div class="row" id="bg003">
+                                <div class="title-wrap left-box" id="002">
+
+
+                                    <div class="en-title color-black-font">
+                                        <h2 class="left show fadeInDownBig" data-wow-duration="1s"><span class="ci-color-orange">A</span>bout <span class="ci-color-orange">R</span>adiant
+                                            <span class="ci-color-orange">G</span>rowth</h2>
+                                        <h1 class="about-jean show fadeInUp" data-wow-duration="1s">
+                                            關於耀展</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-wrap ">
+                                <div id="MainContent_about_img" class="left-card show flipInY" data-wow-duration="1s" style="background-image:url(https://api.jean.com.tw/api/File/PictureFile?pictureID=9AA58C85F28E40D9A7A62863536FC976)">
+                                </div>
+                                <div class="right-txt show fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                                    <p>
+                                        <span id="MainContent_about_desc">耀展有限公司秉持「專業、誠信、用心」的核心價值，致力於打造安全、整潔、宜居的社區環境。我們相信，優質的物業管理能提升居住品質，更能凝聚社區向心力，與客戶一同創造永續幸福的生活空間。</span>
+                                    </p>
+                                    <a id="MainContent_about_link" class="btn-style-index center-btn pointer" href="https://radiant350.com" target="_self">了解更多</a>
+
+                                </div>
+                            </div>
+                            <div class="cloud">
+                                <img src="images/Groukk.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 滑塊-第一區塊 -->
+
+                <!-- 滑塊-第二區塊 -->
+                <div class="section" data-anchor="Page4">
+                    <!--第二區塊-->
+                    <div class="bg-style-wrap mt-1024-top" style="background-image: url(images/003.jpg); padding-bottom: 50px; height: 100%;">
+                        <div class="container" id="bg004">
+                            <div class="row">
+                                <div class="title-wrap" style="margin-bottom:0px;">
+
+
+                                    <div class="en-title color-black-font">
+                                        <h2 class="show fadeInDownBig" data-wow-duration="1s"><span class="ci-color-orange">O</span>ur<br>
+                                            <span class="ci-color-orange">B</span>usinesses</h2>
+                                        <h1 class="about-jean center-txt show fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                                            事業版圖</h1>
+                                        <p class=" show fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+                                            <span id="MainContent_lb_enterprise_desc">耀展專注於高品質物業管理，深耕核心地段，以細緻服務打造宜居環境，致力成為亞太地區值得信賴的物管品牌。</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="ani swiper-slide ">
+                                            <div class="sales-case-wrap">
+                                                <div class="left-img-wrap">
+                                                    <div id="MainContent_lv_Enterprise_panel_left_img_0" class="left-img ani show fadeInUp" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0s" style="background-image:url('images/img_g1_1.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_center_img_0" class="center-img ani show fadeInDown" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInDown" swiper-animate-duration="2.2s" swiper-animate-delay="0.8s" style="background-image:url('images/img_g1_2.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_right_img_0" class="right-img ani show fadeInUp" ata-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.6s" swiper-animate-delay="1s" style="background-image:url('images/img_g1_3.jpg');z-index:9999;">
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="right-txt ">
+                                                    <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.9s">
+                                                        智慧社區：居住升級 • 品味生活<br/>
+                                                    </div>
+                                                    <div class="txt-wrap ">
+                                                        <div class="title-smail ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            Live smart, stay worry-free. We handle the details.<br/>
+                                                        </div>
+                                                        <div class="second-title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            對生活品質有要求的你，值得擁有更從容的節奏。<br>耀展智慧社區服務，整合門禁、保全與住戶管理系統，讓生活更便利、安全無憂。專為現代住戶打造的智能體驗，現在就輕鬆入住。<br/> <br/>
+                                                        </div>
+
+                                                        <div class="btn-wrap">
+                                                            <button class="ani show bounceIn" disabled="disabled" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+                                                            <a href="https://radiant350.com" target="_self" style="display: block;">
+                                                                了解更多
+                                                            </a>
+                                                        </button>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ani swiper-slide ">
+                                            <div class="sales-case-wrap">
+                                                <div class="left-img-wrap">
+                                                    <div id="MainContent_lv_Enterprise_panel_left_img_1" class="left-img ani show fadeInUp" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0s" style="background-image:url('images/img_g2_1.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_center_img_1" class="center-img ani show fadeInDown" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInDown" swiper-animate-duration="2.2s" swiper-animate-delay="0.8s" style="background-image:url('images/img_g2_2.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_right_img_1" class="right-img ani show fadeInUp" ata-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.6s" swiper-animate-delay="1s" style="background-image:url('images/img_g2_3.jpg');z-index:9999;">
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="right-txt ">
+                                                    <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.9s">
+                                                        物業經營：細節中成就永續價值<br/>
+                                                    </div>
+                                                    <div class="txt-wrap ">
+                                                        <div class="title-smail ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            Property Excellence in Every Detail<br/>
+                                                        </div>
+                                                        <div class="second-title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            堅持專業，但不墨守成規；注重細節，也從不忘前瞻思維。這是耀展一路以來秉持的信念，更是我們持續進化的驅動力。<br>【耀展有限公司】放眼亞太，深耕物業管理，致力打造具國際視野的服務品牌，以穩健步伐引領未來。<br/><br/>
+                                                        </div>
+
+                                                        <div class="btn-wrap">
+                                                            <button class="ani show bounceIn" disabled="disabled" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+                                                            <a href="https://radiant350.com" target="_self" style="display: block;">
+                                                                了解更多
+                                                            </a>
+                                                        </button>
+                                                            <button id="MainContent_lv_Enterprise_ReservationButton_1" class="ani show bounceInmodal-btn" swiper-animate-effect="bounceIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.8s">
+                                                            <a href="#">
+                                                                立即賞屋</a></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ani swiper-slide ">
+                                            <div class="sales-case-wrap">
+                                                <div class="left-img-wrap">
+                                                    <div id="MainContent_lv_Enterprise_panel_left_img_2" class="left-img ani show fadeInUp" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0s" style="background-image:url('images/img_g3_1.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_center_img_2" class="center-img ani show fadeInDown" data-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInDown" swiper-animate-duration="2.2s" swiper-animate-delay="0.8s" style="background-image:url('images/img_g3_2.jpg')">
+
+                                                    </div>
+                                                    <div id="MainContent_lv_Enterprise_panel_right_img_2" class="right-img ani show fadeInUp" ata-wow-duration="3s" data-wow-delay="0.1s" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.6s" swiper-animate-delay="1s" style="background-image:url('images/img_g3_3.jpg');z-index:9999;">
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="right-txt ">
+                                                    <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.9s">
+                                                        穩健如初，耀展實力之道<br/>
+                                                    </div>
+                                                    <div class="txt-wrap ">
+                                                        <div class="title-smail ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            Consistency with Character<br/><br/>
+                                                        </div>
+                                                        <div class="second-title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.7s">
+                                                            真正難得的，不是一次驚豔，而是始終如一的堅持。就像一座社區的靈魂，我們不只維護環境，更守護居住的尊嚴。耀展相信，穩定的品質與細膩的服務，是品牌價值最深厚的體現。<br/><br/>
+                                                        </div>
+
+                                                        <div class="btn-wrap">
+                                                            <button class="ani show bounceIn" disabled="disabled" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
+                                                            <a href="https://radiant350.com" target="_self" style="display: block;">
+                                                                了解更多
+                                                            </a>
+                                                        </button>
+                                                            <button id="MainContent_lv_Enterprise_ReservationButton_2" class="ani show bounceIn" swiper-animate-effect="bounceIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.8s">
+                                                            <a href="https://radiant350.com">
+                                                                關於耀展</a></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!-- 如果需要导航按钮 -->
+                                    <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滑塊-第二區塊 -->
+                <!-- 滑塊-第三區塊 -->
+                <div class="section" data-anchor="Page5">
+                    <!--第三區塊-->
+                    <div class="bg-style-wrap " style="background-image: url(images/004.jpg); padding-top: 0px; height: 100%;">
+                        <div class="container" id="bg005">
+                            <div class="row">
+                                <div class="title-wrap pb-80">
+
+
+                                    <div class="en-title color-black-font">
+                                        <h2 class="show fadeInDownBig" data-wow-duration="1s"><span class="ci-color-orange">F</span>eatured<br>
+                                            <span class="ci-color-orange">N</span>ews
+                                            <h1 class="about-jean center-txt show fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                精選消息
+                                            </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="news-wrap-box max-width-section-3 show fadeInDownBig" data-wow-duration="1s">
+                                    <ul class="inner-box-wrap">
+                                        <li>
+                                            <a id="MainContent_link_news_important" href="https://radiant350.com" target="_self">
+                                                <div class="img-box show jackInTheBox" data-wow-duration="1s">
+                                                    <img class="img01-icon" src="images/icon001.svg" alt="">
+                                                    <!-- <img class="img02-icon" src="images/icon001-w.png" alt=""> -->
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <div class="ch show fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                        重大新聞</div>
+                                                    <div class="en show fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Breaking news</div>
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a id="MainContent_link_news_company" href="https://radiant350.com" target="_self">
+                                                <div class="img-box show jackInTheBox" data-wow-duration="1s">
+                                                    <img class="img01-icon" src="images/icon002.svg" alt="">
+                                                    <!-- <img class="img02-icon" src="images/icon002-w.png" alt=""> -->
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <div class="ch show fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                        公司訊息
+                                                    </div>
+                                                    <div class="en show fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Company Information</div>
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a id="MainContent_link_news_activity" href="https://radiant350.com" target="_self">
+                                                <div class="img-box show jackInTheBox" data-wow-duration="1s">
+                                                    <img class="img01-icon" src="images/icon003.svg" alt="">
+                                                    <!-- <img class="img02-icon" src="images/icon003-w.png" alt=""> -->
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <div class="ch show fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                        最新活動
+                                                    </div>
+                                                    <div class="en show fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">latest events</div>
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a id="MainContent_link_news_finance" href="https://radiant350.com" target="_self">
+                                                <div class="img-box show jackInTheBox" data-wow-duration="1s">
+                                                    <img class="img01-icon" src="images/icon004.svg" alt="">
+                                                    <!-- <img class="img02-icon" src="images/icon004-w.png" alt=""> -->
+                                                </div>
+                                                <div class="txt-wrap">
+                                                    <div class="ch show fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                        財務資訊
+                                                    </div>
+                                                    <div class="en show fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Financial information</div>
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滑塊-第三區塊 -->
+                <input name="ctl00$MainContent$aaa" type="hidden" id="MainContent_aaa" value="{&quot;Stock_date&quot;:[&quot;2025/04/08&quot;,&quot;2025/04/09&quot;,&quot;2025/04/10&quot;,&quot;2025/04/11&quot;,&quot;2025/04/14&quot;,&quot;2025/04/15&quot;,&quot;2025/04/16&quot;,&quot;2025/04/17&quot;,&quot;2025/04/18&quot;,&quot;2025/04/21&quot;,&quot;2025/04/22&quot;,&quot;2025/04/23&quot;,&quot;2025/04/24&quot;,&quot;2025/04/25&quot;,&quot;2025/04/28&quot;,&quot;2025/04/29&quot;,&quot;2025/04/30&quot;,&quot;2025/05/02&quot;,&quot;2025/05/05&quot;,&quot;2025/05/06&quot;,&quot;2025/05/07&quot;,&quot;2025/05/08&quot;,&quot;2025/05/09&quot;,&quot;2025/05/12&quot;,&quot;2025/05/13&quot;,&quot;2025/05/14&quot;,&quot;2025/05/15&quot;,&quot;2025/05/16&quot;,&quot;2025/05/19&quot;,&quot;2025/05/20&quot;],&quot;Stock_price&quot;:[&quot;20.7&quot;,&quot;19.3&quot;,&quot;21.25&quot;,&quot;21.35&quot;,&quot;21.8&quot;,&quot;22.85&quot;,&quot;22.6&quot;,&quot;22.95&quot;,&quot;22.9&quot;,&quot;22.45&quot;,&quot;22.3&quot;,&quot;22.75&quot;,&quot;22.65&quot;,&quot;22.75&quot;,&quot;23.25&quot;,&quot;23.5&quot;,&quot;23.3&quot;,&quot;24.95&quot;,&quot;25.1&quot;,&quot;25.25&quot;,&quot;25.05&quot;,&quot;24.9&quot;,&quot;25.1&quot;,&quot;25.55&quot;,&quot;25.7&quot;,&quot;25.9&quot;,&quot;25.4&quot;,&quot;25.65&quot;,&quot;25.65&quot;,&quot;25.7&quot;]}"
+                />
+                <input name="ctl00$MainContent$vvv" type="hidden" id="MainContent_vvv" value="[&quot;20.7&quot;,&quot;19.3&quot;,&quot;21.25&quot;,&quot;21.35&quot;,&quot;21.8&quot;,&quot;22.85&quot;,&quot;22.6&quot;,&quot;22.95&quot;,&quot;22.9&quot;,&quot;22.45&quot;,&quot;22.3&quot;,&quot;22.75&quot;,&quot;22.65&quot;,&quot;22.75&quot;,&quot;23.25&quot;,&quot;23.5&quot;,&quot;23.3&quot;,&quot;24.95&quot;,&quot;25.1&quot;,&quot;25.25&quot;,&quot;25.05&quot;,&quot;24.9&quot;,&quot;25.1&quot;,&quot;25.55&quot;,&quot;25.7&quot;,&quot;25.9&quot;,&quot;25.4&quot;,&quot;25.65&quot;,&quot;25.65&quot;,&quot;25.7&quot;]"
+                />
+                <input type="hidden" id="enterpriseTitile" />
+                <input type="hidden" name="ctl00$MainContent$carouselSec" id="MainContent_carouselSec" value="5" />
+
+
+
+
+
+                <!--footer-->
+                <div class="section" data-anchor="Footer">
+                    <footer style="min-height:100vh;">
+                        <ul class="footer-menu-wrap">
+
+                            <li>
+                                <ul>
+                                    <a id="lv_footer_link_0" href="../#" target="_blank">
+                                        <h1>
+                                            <span id="lv_footer_lb_node_0">關於耀展</span></h1>
+                                    </a>
+
+
+                                    <a id="lv_footer_lv_sub_node_0_link_0" href="/tw/about" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_0">集團介紹</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_1" href="/tw/history" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_1">集團沿革</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_2" href="/tw/organization" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_2">組織及職掌</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_3" href="/tw/team" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_3">經營團隊</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_4" href="/tw/csr" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_4">企業社會責任</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_5" href="/tw/importantmsg" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_5">重大訊息公布</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_6" href="/tw/investment" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_6">投資人專區</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_7" href="https://sites.google.com/view/buildhistory/" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_7">建築履歷</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_0_link_8" href="https://hrm.jean.com.tw/HR" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_0_lb_node_8">人才招募</span></li>
+                                    </a>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a id="lv_footer_link_1" href="#" target="_self">
+                                        <h1>
+                                            <span id="lv_footer_lb_node_1">精選消息</span>
+                                        </h1>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_1_link_0" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_1_lb_node_0">重大新聞</span>
+                                        </li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_1_link_1" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_1_lb_node_1">公司訊息</span>
+                                        </li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_1_link_2" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_1_lb_node_2">最新活動</span>
+                                        </li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_1_link_3" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_1_lb_node_3">財務訊息</span>
+                                        </li>
+                                    </a>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a id="lv_footer_link_2" href="#" target="_blank">
+                                        <h1>
+                                            <span id="lv_footer_lb_node_2">事業版圖</span></h1>
+                                    </a>
+
+
+                                    <a id="lv_footer_lv_sub_node_2_link_0" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_0">美學建築</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_2_link_1" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_1">酒店式公寓</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_2_link_2" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_2">物業管理</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_2_link_3" href="#">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_3">不動產仲介</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_2_link_6" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_6">綠能事業</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_2_link_7" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_2_lb_node_7">企業公益</span></li>
+                                    </a>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a id="lv_footer_link_3" href="#" target="_self">
+                                        <h1>
+                                            <span id="lv_footer_lb_node_3">投資人專區</span></h1>
+                                    </a>
+
+
+                                    <a id="lv_footer_lv_sub_node_3_link_0" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_3_lb_node_0">財務資訊</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_3_link_1" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_3_lb_node_1">股價股利</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_3_link_2" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_3_lb_node_2">公司治理</span></li>
+                                    </a>
+
+                                    <a id="lv_footer_lv_sub_node_3_link_4" href="#" target="_self">
+                                        <li>
+                                            <span id="lv_footer_lv_sub_node_3_lb_node_4">利害關係人專區</span></li>
+                                    </a>
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                        <hr class="hr-style">
+                        <div class="icon-footer-wrap">
+                            <h1>CONNECT WITH US</h1>
+                            <div style="color: #fff;margin: 10px auto;">
+                                E-mail:<a class="footeremail" href="mailto:radiant350@gmail.com"> radiant350@gmail.com</a>
+                            </div>
+                            <div class="icon-wrap">
+                                <a target="_self" href="https://radiant350.com">
+                                    <li><i class="fab fa-instagram"></i></li>
+                                </a>
+                                <a target="_self" href="https://radiant350.com">
+                                    <li><i class="fab fa-line"></i></li>
+                                </a>
+                                <a target="_self" href="https://radiant350.com">
+                                    <li><i class="fab fa-facebook-square"></i></li>
+                                </a>
+                                <a target="_self" href="https://radiant350.com">
+                                    <li><i class="fab fa-twitter-square"></i></li>
+                                </a>
+                                <a target="_self" href="https://radiant350.com">
+                                    <li><i class="fab fa-linkedin"></i></li>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            Copyright © 2025 RADIANT GROWTH LIMITED. All rights reserved.
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- go-to-top -->
+
+        <a href="javascript:void(0)" class="go-to-top scrollTop" onclick="ScrollMove('Banner')">
+            
+            <i class="fas fa-sort-up"></i>
+        </a>
+
+        <!--手機版選單-->
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="menu" class="slinky-menu">
+            <ul>
+                <li style="background-color: #000; height: 80px; padding-top: 20px;">
+                    <div class="navbar-form">
+                        <div class="form-group" style="width:100%;">
+                            <input type="text" id="mSearchInput" class="form-control" placeholder="Search" />
+                        </div>
+                        <div id="mbtnsearch" class="btn btn-default"><i style="margin-top:8px" class="fas fa-search"></i></div>
+                    </div>
+                </li>
+
+                <li><a href="#">關於耀展</a>
+                    <ul>
+                        <li><a href="#" target='_self'>集團介紹</a></li>
+                        <li><a href="#" target='_self'>集團沿革</a></li>
+                        <li><a href="#" target='_self'>組織及職掌</a></li>
+                        <li><a href="#" target='_self'>經營團隊</a></li>
+                        <li><a href="#" target='_self'>永續發展</a></li>
+                        <li><a href="#" target='_self'>重大訊息及關係人</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">精選消息</a>
+                    <ul>
+                        <li><a href="#" target='_self'>重大新聞</a></li>
+                        <li><a href="#" target='_self'>公司訊息</a></li>
+                        <li><a href="#" target='_self'>最新活動</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">事業版圖</a>
+                    <ul>
+                        <li><a href="#" target='_self'>美學建案</a></li>
+                        <li><a href="#" target='_self'>酒店式公寓</a></li>
+                        <li><a href="#" target='_self'>物業管理</a></li>
+                        <li><a href="#" target='_self'>不動產仲介</a></li>
+                        <li><a href="#" target='_self'>綠能事業</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" target='_self'>聯絡我們</a></li>
+
+                <li><a href="#" target='_self'>會員登錄</a></li>
+
+                <li><a href="#" target='_self'>CRM報修專區</a></li>
+
+                <li><a href="#" target='_self'>人才招募</a></li>
+
+                <li>
+                    <div class="delete-menu">
+                        <span>back</span>
+                    </div>></li>
+            </ul>
+
+        </div>
+
+        <!-- 彈跳視窗 -->
+
+
+
+        <!-- Script -->
+
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script>
+            //Web Version Search Function
+            $("#mSearchInput").change(function() {
+                let item = $("#searchInput");
+                item.val($(this).val());
+            });
+
+            $("#mbtnsearch").click(function() {
+                let item = $("#searchInput");
+                window.open("https://cse.google.com.hk/cse?cx=008536910086163109012:nfyn4nyqvcb&q=" + item.val(), "_self");
+            });
+            //Mobile Version Search Function
+            //$("#mSearchInput").change(function () {
+            //    let item = $("#searchInput");
+            //    item.val($(this).val());
+            //});
+
+            //$("#mbtnsearch").click(function () {
+            //    let item = $("#searchInput");
+            //    window.open("https://cse.google.com.hk/cse?cx=008536910086163109012:nfyn4nyqvcb&q=" + item.val());
+            //});
+
+            $(document).ready(function() {
+                $('#menu').slinky({
+                    title: true
+                });
+                $('.menu-icon').click(function(event) {
+                    $('#menu').addClass('active')
+                    $('.wrap').addClass('active')
+                });
+                $('.delete-menu').click(function(event) {
+                    $('#menu').removeClass('active')
+                    $('.wrap').removeClass('active')
+                });
+                $(window).scroll(function(evt) {
+                    if ($(window).scrollTop() > 200)
+                        $(".header-menu,.go-to-top").addClass("active1");
+                    else
+                        $(".header-menu,.go-to-top").removeClass("active1");
+                });
+                // /彈跳視窗/ 
+                $('.modal-btn').click(function() {
+                    event.preventDefault();
+                    $('.wrap').addClass("active")
+                    $(".cover-box").addClass("active");
+                    $(".form-wrap li,.delete-line-wrap li:nth-child(1),.delete-line-wrap li:nth-child(2),.btn-wrap-form li,.box-wraper-inner").addClass("active");
+
+                    var title = $(this).closest("div.right-txt").children(".title").text();
+                    $("#enterpriseTitile").val(title.trim());
+
+                });
+                $(".delete-line-wrap").click(function() {
+                    event.preventDefault();
+                    $(".form-wrap li,.delete-line-wrap li:nth-child(1),.delete-line-wrap li:nth-child(2),.btn-wrap-form li,.box-wraper-inner").removeClass("active");
+                    $(".cover-box").removeClass("active");
+                    $('.wrap').removeClass("active")
+                });
+                // / /彈跳視窗/ 
+                $('.scrollTop').click(function(e) {
+                    e.preventDefault();
+                    //var target = $(this).attr('href');
+                    var target = $('#header1')
+                    var targetPos = 0;
+                    $('html, body').animate({
+                        scrollTop: targetPos
+                    }, 1000);
+                });
+            });
+        </script>
+
+        <script>
+            var wow = new WOW({
+                boxClass: 'show', // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: -4, // distance to the element when triggering the animation (default is 0)
+                mobile: true, // trigger animations on mobile devices (default is true)
+                live: true, // act on asynchronously loaded content (default is true)
+                callback: function(box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null // optional scroll container selector, otherwise use window
+            });
+            wow.init();
+        </script>
+        <script>
+            (function($) {
+                $.fn.animateNumbers = function(stop, commas, duration, ease) {
+                    return this.each(function() {
+                        var $this = $(this);
+                        var start = parseInt($this.text().replace(/,/g, ""));
+                        commas = (commas === undefined) ? true : commas;
+                        $({
+                            value: start
+                        }).animate({
+                            value: stop
+                        }, {
+                            duration: duration == undefined ? 1000 : duration,
+                            easing: ease == undefined ? "swing" : ease,
+                            step: function() {
+                                $this.text(Math.floor(this.value));
+                                if (commas) {
+                                    $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1"));
+                                }
+                            },
+                            complete: function() {
+                                if (parseInt($this.text()) !== stop) {
+                                    $this.text(stop);
+                                    if (commas) {
+                                        $this.text($this.text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1"));
+                                    }
+                                }
+                            }
+                        });
+                    });
+                };
+            })(jQuery);
+        </script>
+        <script>
+            $(document).ready(function() {
+                console.log("2123ggg12");
+
+                $(window).scroll(function() {
+                    console.log("21231231312");
+                    /* Check the location of each desired element */
+                    $('#pageLoad').each(function(i) {
+
+                        var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 5;
+                        console.log(bottom_of_object)
+                        var bottom_of_window = $(window).scrollTop() + $(window).height();
+                        console.log(bottom_of_window)
+                        /* If the object is completely visible in the window, fade it it */
+                        if (bottom_of_window > bottom_of_object) {
+
+                            $('#pageLoad').animateNumbers(2442, true, 1000);
+                            $('.title-04-box .title-logo-left').addClass('active')
+                        }
+                    });
+
+                });
+            });
+        </script>
+
+
+        <script type="text/javascript">
+            console.log('test test test test test');
+            var ScrollMove = function(tag) {
+                fullpage_api.moveTo(tag, 1);
+            }
+
+            var myFullpage = new fullpage('#fullpage', {
+                verticalCentered: false,
+                scrollOverflow: true,
+                scrollingSpeed: 1000,
+                anchors: ['Banner', 'Page1', 'Page2', 'Page3', 'Page4', 'Page5', 'Footer'],
+                onLeave: function(index, nextIndex, direction) {
+                    if (direction == 'down') {
+
+                        $('.menu-wrap,.menu-icon').addClass('active2')
+                        $(".go-to-top").removeClass("active1");
+                    } else if (direction == 'up') {
+                        $('.menu-wrap,.menu-icon').removeClass('active2')
+                        $(".go-to-top").addClass("active1");
+
+                    }
+                    if (index.index == 2 & nextIndex.index == 3 & direction == 'down') {
+
+                        //if (!($('.title-logo-left').hasClass('active'))) {
+                        //    $('#pageLoad').animateNumbers(2442, true, 1000);
+                        //    return false;
+
+                        //}
+                    }
+                }
+            });
+        </script>
+        <div class="modal-cover-box-wrap">
+            <div class="cover-box">
+                <div class="box-wraper">
+                    <div class="box-wraper-inner">
+                        <form action="">
+                            <ul class="form-wrap">
+                                <li>
+                                    <label for="">姓名</label>
+                                    <input type="text" id="txtContactUsName" placeholder="輸入您的姓名" required>
+                                </li>
+                                <li>
+                                    <label for="">手機號碼</label>
+                                    <input type="tel" id="txtContactUsTel" placeholder="輸入您的手機號碼" required>
+                                </li>
+                                <li>
+                                    <label for="">Email</label>
+                                    <input type="email" id="txtContactUsEmail" placeholder="請輸入Email" required>
+                                </li>
+                                <li>
+                                    <label for="">希望賞屋日期</label>
+                                    <input type="date" id="txtContactDtView" max="2035-05-20">
+                                </li>
+                            </ul>
+                            <ul class="btn-wrap-form">
+                                <li>
+                                    <input type="reset" value="清除">
+                                </li>
+                                <li>
+                                    <input type="button" value="送出" onclick="defaultPage.reservation()">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="delete-wrap">
+                        <ul class="delete-line-wrap">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var label = JSON.parse(document.getElementById("MainContent_aaa").value)
+
+            console.log(label.Stock_date);
+            var config = {
+                type: 'line',
+                data: {
+                    labels: label.Stock_date,
+                    datasets: [{
+                        label: '價格',
+                        backgroundColor: window.chartColors.red,
+                        borderColor: window.chartColors.red,
+                        data: label.Stock_price,
+                        fill: false,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: false,
+                        text: 'Chart.js Line Chart'
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            //display: true,
+                            //scaleLabel: {
+                            //    display: true,
+                            //    labelString: 'Month'
+                            //}
+                            ticks: {
+                                maxRotation: 0,
+                                autoSkip: true,
+                                maxTicksLimit: 6,
+                                fontSize: 14
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+
+                            scaleLabel: {
+                                display: false,
+                                labelString: 'Value'
+                            }
+                        }]
+                    }
+                }
+            };
+
+            window.onload = function() {
+                var ctx = document.getElementById('Chart_stock').getContext('2d');
+                window.myLine = new Chart(ctx, config);
+            };
+        </script>
+        <script>
+            //Swiper5
+            var mySwiper = new Swiper('.swiper-container3', {
+
+                //on: {
+                //    init: function () {
+                //        swiperAnimateCache(this); //隐藏动画元素 
+                //        swiperAnimate(this); //初始化完成开始动画
+                //    },
+                //    slideChangeTransitionEnd: function () {
+                //        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                //    }
+
+                //},
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: parseInt($("#MainContent_carouselSec").val()) * 1000,
+                    disableOnInteraction: false,
+                },
+                //loop: true
+
+            })
+        </script>
+
+        <script>
+            //Swiper5
+            var mySwiper = new Swiper('.swiper-container', {
+                on: {
+                    init: function() {
+                        swiperAnimateCache(this); //隐藏动画元素 
+                        swiperAnimate(this); //初始化完成开始动画
+                    },
+                    slideChangeTransitionEnd: function() {
+                        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                    }
+
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+
+                ,
+                autoplay: {
+                    delay: 12000,
+                    disableOnInteraction: false,
+                },
+                loop: true
+
+            })
+        </script>
+        <script>
+            //var s = 0;
+            //var point = 0;
+            //$(function () {
+
+            //    $(window).scroll(function () {
+            //        var scrollVal = $(this).scrollTop();
+
+            //        $(".qScrollTop").text(scrollVal);
+            //        if (s == 0 && point < scrollVal) {
+            //            if (scrollVal >= 200 && scrollVal <= 900) {
+            //                setTimeout(function () { $(".goto2").click(); }, 700);
+            //                s = 1;
+            //            }
+            //            else if (scrollVal >= 2000 && scrollVal <= 2600) {
+            //                setTimeout(function () { $(".goto3").click(); }, 700);
+            //                s = 1;
+            //            }
+            //            else if (scrollVal >= 3000 && scrollVal <= 3500) {
+            //                setTimeout(function () { $(".goto4").click(); }, 700);
+            //                s = 1;
+            //            }
+
+            //        }
+            //        point = scrollVal;
+            //    });
+
+
+            //    // 偵聽a click
+            //    $(".fixed a").bind("click", function () {
+
+            //        var id = $(this).attr("data-id");
+
+            //        // 取得目標區塊的y座標
+            //        var target_top = $("#bg00" + id).offset().top - 50;
+
+            //        // 取得body物件 這種寫法在各瀏覽器上最保險
+            //        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+
+            //        // 移動捲軸無動畫效果
+            //        //$body.scrollTop(target_top);
+
+            //        // 移動捲軸有動畫效果
+            //        $body.animate({
+            //            scrollTop: target_top
+            //        }, 200);
+            //        setTimeout(function () { s = 0; }, 300);
+            //    })
+            //});
+
+
+            //$(window).on('scroll', function(e) {
+            //    console.log(e.type + '-event was 250ms not triggered');
+            //	s =0;
+            //}, 250);
+        </script>
+
+
+    </form>
+</body>
+
+</html>
